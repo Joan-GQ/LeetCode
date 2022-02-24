@@ -44,8 +44,8 @@ public class Solution {
                 if (sum == 0) {
                     /* If a+b+c == 0, append to result list and discard current 'b' and 'c' */
                     appendResult(a, b, c, result);
-                    if(k > j + 1 && nums[j + 1] == nums[j]) j++; // If next 'b' == current 'b', skip until 'b' is unique.
-                    if(j < k - 1 && nums[k - 1] == nums[k]) k--; // If prev 'c' == current 'c', skip until 'c' is unique.
+                    while(k > j + 1 && nums[j + 1] == nums[j]) j++; // If next 'b' == current 'b', skip until 'b' is unique.
+                    while(j < k - 1 && nums[k - 1] == nums[k]) k--; // If prev 'c' == current 'c', skip until 'c' is unique.
                     j++; k--;
                 }
 
